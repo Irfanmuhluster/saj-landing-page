@@ -1,0 +1,60 @@
+.artikel {
+    display: flex;
+    color: white;
+    flex-direction: column;
+    padding-bottom: 3rem;
+    .block-artikel {
+        display: flex;
+        flex-direction: column;
+        @include media-breakpoint-up(md)  {
+            flex-direction: row;
+        }
+        height: max-content;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid $gray-500;
+        padding-top: 2rem;
+    }   
+    .image {
+        @include media-breakpoint-up(md)  {
+            width: 100%;
+        }
+        max-width: 100%;
+        height: auto;
+        border-radius: 0.25rem;
+        object-fit: cover;
+        // width : 100%;
+    }
+    .block-artikel-text {
+        padding-right: 2rem;
+        padding-top: 2rem;
+        @include media-breakpoint-up(md) {
+            padding-top: 0rem;
+        }
+        
+        .link {
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #666666;
+        }
+        .block-artikel-title {
+            font-size: 1.25rem;
+            line-height: 1.75rem;
+            display: block;
+            font-weight: 700;
+            color: $gray-900;
+        }
+        .tanggal , .penulis, .devider{
+            color: $gray-600;
+            font-style: oblique;
+            font-weight: 600;
+            font-size: 0.75rem;
+            line-height: 1.25rem;
+        }
+        .block-artikel-desc{
+            color: $gray-700;
+            font-size: 1rem;
+            line-height: 1.5rem;
+            margin-top: 1rem;
+        }
+    }
+}
